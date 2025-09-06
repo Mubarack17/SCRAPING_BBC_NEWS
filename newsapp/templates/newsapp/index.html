@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Latest News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="jumbotron bg-dark text-white text-center">
+      <h1>Get The Latest News on Our Website</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        {% for title, link, img in mylist %}
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="{{ img }}" class="card-img-top" alt="News image" style="height:200px; object-fit:cover;">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ link }}" target="_blank">{{ title }}</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
+  
